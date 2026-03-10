@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            float: left;
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- BFC(block formatting context) -->
+     <!-- 원래대로라면은 div 박스는 float과 겹쳐짐 -->
+      <!-- BFC에 의해 텍스트 라인은 float를 피해서 배치 -->
+    <img src="../media/레서판다.jpg" width="200" height="200" alt="레서판다">
+    <div>안녕? 레서판다야</div>
+    <div>레레레레레레레레레</div> 
+</body>
+</html>
