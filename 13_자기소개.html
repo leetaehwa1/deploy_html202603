@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #container{
+         width: 800px;
+            margin: 0% auto;
+            box-sizing: border-box;
+       }
+       #sidebar1{
+        width: 300px;
+        height: 700px;
+        padding: 30px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px gray;
+        background-color: cornflowerblue;
+        float: left;
+        color: white;
+       }
+       #sidebar2{
+        width: 500px;
+        height: 700px;
+        padding: 0px 30px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-shadow: 2px 2px 2px gray;
+        box-sizing: border-box;
+        background-color: aliceblue;
+        float: left;
+        color: black;
+       }
+       #namecard{
+        font-weight: bold;
+        padding: 15px;
+       }
+       #sns{
+        text-align: center;
+        font-size: x-large;
+        color: white;
+       }
+       #clickbox{
+        border: 2px solid white;
+        border-radius: 45%;
+        background-color: white;
+       }
+       a{
+        text-decoration: none;
+        color: cornflowerblue;
+       }
+       
+       .bold{
+        font-weight: bold;
+       }
+       .box1{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background-image: url(../media/레서판다.jpg);
+            background-size: cover;
+       }
+       .box2{
+        width: 20px;
+        height: 20px;
+        border: 5px;
+        border: 2px solid cornflowerblue;
+       }
+
+       .normal{
+        font-weight: normal;
+       }
+       .list1{
+        list-style: none;
+       }
+       a:active{
+        color: chartreuse;
+       }
+       a:hover{
+        color: skyblue;
+       }
+       .subtitle{
+        border: 5px solid aliceblue;
+        padding: 10px;
+        border-left-color: cornflowerblue;
+       }
+       table,th,tbody,tr,td{
+        border: 2px solid coral;
+        border-collapse: collapse;
+        text-align: center;
+        padding: 10px 10px 10px 10px;
+        border-radius: 5%;
+       }
+      th{
+        background-color: cornflowerblue;
+        padding: 0px 10px;
+        border: 2px solid cornflowerblue
+      }
+      
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="sidebar1">
+            <div id="namecard">
+                <div class="box1"></div>
+                <h1>Lee TaeHwa</h1>
+                <p class="small">프로그래밍 재밌다.</p>
+            </div>
+            <ul class="list1">
+                <li>🏠 Incheon, Korea</li>
+                <li>📧 th3926@naver.com</li>
+            </ul>
+            <div id="sns">
+                <h2>SNS</h2>
+                <h3><a href="https://www.naver.com"><span id="clickbox">클릭!</span></a></h3>
+            </div>
+        </div>
+
+        <div id="sidebar2">
+            <div id="section">
+                <h2 class="subtitle">자기소개</h2>
+                <p><mark>프로그래밍</mark>에 관심이 많습니다. <br>현재 열심히 공부하며 코딩 중!</p>
+            </div>
+
+            <div id="section">
+            <h2 class="subtitle">Experience</h2>
+                <ul>
+                    <li>프론트엔드
+                        <ul>
+                            <li>HTML/CSS/JAVASCRIPT </li>
+                            <li>웹 페이지 잘 만든다 </li>
+                            <li>다 잘함</li> 
+                        </ul>
+                    </li>
+                    <li>백엔드
+                        <ul>
+                            <li>자바 잘함 </li>
+                            <li>오라클 더 잘함</li>
+                        </ul>                        
+                    </li>
+                </ul>             
+            </div>
+            <div id="section"></div>
+            <h2 class="subtitle">Education</h2>
+                <table>
+                  <caption><span class="box2">학력 사항</span></caption>
+                  <thead>
+                      <tr>
+                          <th>출신학교</th>
+                          <th>전공</th>
+                          <th>기간</th>
+                          <th>구분</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>좋은대학교</td>
+                          <td>좋은학과</td>
+                          <td>2010.3 ~ 2013.2</td>
+                          <td>졸업</td>
+                      </tr>
+                      <tr>
+                          <td>꽤좋은고등학교</td>
+                          <td> - </td>
+                          <td>2007.3 ~ 2009.2</td>
+                          <td>졸업</td>
+                      </tr>
+                  </tbody>
+                </table>
+        </div>
+    </div>
+</body>
+</html>
