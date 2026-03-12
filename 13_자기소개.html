@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>자기소개 페이지</title>
     <style>
        #container{
          width: 800px;
@@ -48,6 +48,19 @@
         border: 10px solid white;
         border-radius: 50%;
         background-color: white;
+       }
+       #watch{
+        border: 4px solid white; 
+        padding: 15px 25px;              
+        background-color: cornflowerblue;         
+        border-radius: 50%;
+        box-shadow: 3px 3px 10px gray; 
+        font-size: 30px;
+        font-weight: bold;
+        color: black;
+        position: fixed;
+        top: 10px;
+        left: 10px;
        }
        a{
         text-decoration: none;
@@ -112,12 +125,13 @@
     </style>
 </head>
 <body>
+    <div class="" id="watch"></div>
     <div id="container">
         <div id="sidebar1">
             <div id="namecard">
                 <div class="box1"></div>
                 <h1>Lee TaeHwa</h1>
-                <p class="small">프로그래밍 재밌다.</p>
+                <p class="small">자라나는 프로그래머.</p>
             </div>
             <ul class="list1">
                 <li>🏠 Incheon, Korea</li>
@@ -182,5 +196,16 @@
                 </table>
         </div>
     </div>
+    
 </body>
 </html>
+<script>
+    setInterval(()=>{
+        let datetime = new Date();
+        let obj = document.querySelector("#watch");
+        let second = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds()
+        let time = datetime.getHours()+ " : " 
+            + datetime.getMinutes() + " : " + second;
+        obj.innerHTML = time;
+    },1000);
+</script>
