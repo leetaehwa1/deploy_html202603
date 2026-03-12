@@ -33,6 +33,7 @@
         background-color: aliceblue;
         float: left;
         color: black;
+        position: relative;
        }
        #sidebar3{
         width: 300px;
@@ -59,14 +60,26 @@
         background-color: white;
        }
        #watch{
-        position: fixed;
-        width: 150px;
-        height: 150px;
-        border: 5px solid cornflowerblue;
-        border-radius: 50%;
-        text-align: center;
-        line-height: 150px;
-        font-size: 20px;
+            position: absolute;
+
+            top: 20px;
+            right: 20px;
+
+            padding: 10px 20px;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            color: #00eaff;
+
+            background: rgba(0,0,0,0.6);
+            border: 2px solid #00eaff;
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px #00eaff;
+
+            letter-spacing: 3px;
+
        }
        a{
         text-decoration: none;
@@ -81,8 +94,11 @@
             height: 200px;
             border-radius: 50%;
             border: 2px solid white;
-            background-image: url(레서판다.jpg);
+            background-image: url(../media/레서판다.jpg);
             background-size: cover;
+       }
+       .box1:hover{
+        background-image: url(media/카피바라.jpg);
        }
        .box2{
         width: 20px;
@@ -111,6 +127,7 @@
        a:hover{
         color: skyblue;
        }
+    
        .subtitle{
         border-left: 5px solid aliceblue;
         padding-left: 10px;
@@ -141,15 +158,17 @@
         width: 50px;
         height: 50px;
         margin: 10px;
+        transition: 0.3s;
         border-radius: 15px;
+      }
+      .snsicon:hover{
+        transform: scale(1.2);
       }
      
     </style>
 </head>
 <body>
-    <div class="" id="watch"></div>
     <div id="container">
-        
         <div id="sidebar1">
             <div id="namecard">
                 <div class="box1"></div>
@@ -162,24 +181,30 @@
             </ul>
             <div id="sns">
                 <h2>SNS</h2>
+                <a href="https://github.com/leetaehwa1" target="_blank">
+                    <img src="../media/깃허브.jpg" class="snsicon" alt="깃허브">   
+                </a>
+
                 <a href="https://blog.naver.com/leetaehwahtml" target="_blank">
-                    <img src="네이버블로그.jpg" class="snsicon" alt="네이버 블로그">   
+                    <img src="../media/네이버블로그.jpg" class="snsicon" alt="네이버 블로그">   
                 </a>
 
                  <a href="https://www.instagram.com/dlxoghk01?igsh=ZDdqZzM0ZjN6cXds&utm_source=qr" target="_blank">
-                    <img src="인스타.jpg" class="snsicon" alt="인스타그램">   
+                    <img src="../media/인스타.jpg" class="snsicon" alt="인스타그램">   
                 </a>
             
                  <a href="https://www.youtube.com/@%EC%9D%B4%ED%83%9C%ED%99%94-y4k" target="_blank">
-                    <img src="유튜브.jpg" class="snsicon" alt="유튜브">   
+                    <img src="../media/유튜브.jpg" class="snsicon" alt="유튜브">   
                 </a>
             </div>
         </div>
 
         <div id="sidebar2">
+            <div id="watch"></div>
             <div id="section">
-                <h2 class="subtitle">자기소개</h2>
+                <h2 class="subtitle">자기소개</h2> 
                 <p><mark>프로그래밍</mark>에 관심이 많습니다. <br>현재 열심히 공부하며 코딩 중!</p>
+                
             </div>
 
             <div id="section">
