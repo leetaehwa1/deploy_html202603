@@ -6,11 +6,12 @@
     <title>자기소개 페이지</title>
     <style>
        #container{
-         width: 800px;
+         width: 1300px;
          height: 1000px;
             margin: 0% auto;
             box-sizing: border-box;
        }
+      
        #sidebar1{
         width: 300px;
         height: 800px;
@@ -24,16 +25,24 @@
         color: white;
        }
        #sidebar2{
-        width: 500px;
+        width: 700px;
         height: 800px;
         padding: 0px 30px;
-        border-top-right-radius: 10px;
-        border-bottom-right-radius: 10px;
         box-shadow: 2px 2px 2px gray;
         box-sizing: border-box;
         background-color: aliceblue;
         float: left;
         color: black;
+       }
+       #sidebar3{
+        width: 300px;
+        height: 800px;
+        padding: 10px 15px;
+        float: left;
+        background-color: brown;
+         border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        box-sizing: border-box;
        }
        #namecard{
         font-weight: bold;
@@ -44,13 +53,12 @@
         font-size: x-large;
         color: white;
        }
-       #clickbox{
-        border: 10px solid white;
+       #clickbox1{
+        border: 20px solid white;
         border-radius: 50%;
         background-color: white;
        }
        #watch{
-        left: 350px;
         position: fixed;
         width: 150px;
         height: 150px;
@@ -91,6 +99,9 @@
        ul{
         line-height: 1.8;
        }
+       .ul1{
+        color: aliceblue;
+       }
        .list1{
         list-style: none;
        }
@@ -104,7 +115,14 @@
         border-left: 5px solid aliceblue;
         padding-left: 10px;
         border-left-color: cornflowerblue;
+        font-style: italic;
        }
+       .subtitle2{
+        border-left: 5px solid burlywood;
+        padding-left: 10px;
+        color: honeydew;
+        font-style: italic;
+        } 
        table{
         width: 100%;
         border-collapse: collapse;
@@ -119,12 +137,19 @@
        background-color: rgb(86, 86, 233);
        color: white;
       }
-      
+      .snsicon{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 15px;
+      }
+     
     </style>
 </head>
 <body>
     <div class="" id="watch"></div>
     <div id="container">
+        
         <div id="sidebar1">
             <div id="namecard">
                 <div class="box1"></div>
@@ -137,7 +162,17 @@
             </ul>
             <div id="sns">
                 <h2>SNS</h2>
-                <h3><a href="https://www.naver.com"><span id="clickbox">클릭!</span></a></h3>
+                <a href="https://blog.naver.com/leetaehwahtml" target="_blank">
+                    <img src="네이버블로그.jpg" class="snsicon" alt="네이버 블로그">   
+                </a>
+
+                 <a href="https://www.instagram.com/dlxoghk01?igsh=ZDdqZzM0ZjN6cXds&utm_source=qr" target="_blank">
+                    <img src="인스타.jpg" class="snsicon" alt="인스타그램">   
+                </a>
+            
+                 <a href="https://www.youtube.com/@%EC%9D%B4%ED%83%9C%ED%99%94-y4k" target="_blank">
+                    <img src="유튜브.jpg" class="snsicon" alt="유튜브">   
+                </a>
             </div>
         </div>
 
@@ -153,19 +188,23 @@
                     <li>프론트엔드
                         <ul>
                             <li>HTML/CSS/JAVASCRIPT </li>
-                            <li>웹 페이지 잘 만든다 </li>
-                            <li>다 잘함</li> 
+                            <li>웹 페이지 잘 못 만든다. </li>
+                            <li>다 못한다.</li>
+                            <li>디자인 너무 어려움</li>
+                            <li>프로그래밍 더 열심히 해보자</li>
                         </ul>
                     </li>
                     <li>백엔드
                         <ul>
                             <li>자바 잘함 </li>
                             <li>오라클 더 잘함</li>
+                            <li>사실 거짓말</li>
+                            <li>백엔드가 더 어려워</li>
                         </ul>                        
                     </li>
                 </ul>             
             </div>
-            <div id="section"></div>
+            <div id="section">
             <h2 class="subtitle">Education</h2>
                 <table>
                   <caption><span class="box2">학력 사항</span></caption>
@@ -192,6 +231,39 @@
                       </tr>
                   </tbody>
                 </table>
+                </div>
+                
+        </div>
+
+        <div id="sidebar3"> 
+                <h2 class="subtitle2">Skills</h2>
+                    <ul class="ul1">
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Java</li>
+                    <li>Oracle</li>
+                    </ul>
+
+             <h2 class="subtitle2">자격증</h2>
+             <ul class="ul1">
+                    <li>검도 3단</li>
+                    <li>자동차운전면허 1종보통</li>
+                    <li>누워서 릴스보기기사</li>
+             </ul>
+             <h2 class="subtitle2">Projects</h2>
+                <ul class="ul1">
+                    <li>자기소개 웹페이지</li>
+                    <li>Todo List 웹앱</li>
+                    <li>간단한 쇼핑몰 사이트</li>
+                </ul>
+                <h2 class="subtitle2">Tools</h2>
+                <ul class="ul1">
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Figma</li>
+                </ul>
         </div>
     </div>
     
