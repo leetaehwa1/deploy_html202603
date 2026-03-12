@@ -23,7 +23,12 @@
         background-color: cornflowerblue;
         float: left;
         color: white;
+        transition: 0.3s;
        }
+       #sidebar1:hover{
+        transform: scale(1.02);
+       }
+
        #sidebar2{
         width: 700px;
         height: 800px;
@@ -34,7 +39,12 @@
         float: left;
         color: black;
         position: relative;
+        transition: 0.3s;
        }
+        #sidebar2:hover{
+        transform: scale(1.02);
+        }
+       
        #sidebar3{
         width: 300px;
         height: 800px;
@@ -44,6 +54,10 @@
          border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
         box-sizing: border-box;
+        transition: 0.3s;
+       }
+        #sidebar3:hover{
+        transform: scale(1.02);
        }
        #namecard{
         font-weight: bold;
@@ -94,16 +108,19 @@
             height: 200px;
             border-radius: 50%;
             border: 2px solid white;
-            background-image: url(레서판다.jpg);
+            background-image: url(../media/레서판다.jpg);
             background-size: cover;
        }
        .box1:hover{
-        background-image: url(카피바라.jpg);
+        background-image: url(../media/카피바라.jpg);
        }
        .box2{
-        width: 20px;
+        width: 30px;
         height: 20px;
-        border: 1px solid cornflowerblue;
+        background-color: violet;
+        border: 2px darkred cornflowerblue;
+        box-sizing: border-box;
+        box-shadow: 1px 1px black;
         font-style: normal;
         font-weight: bold;
        }
@@ -143,7 +160,8 @@
        table{
         width: 100%;
         border-collapse: collapse;
-        margin-top: 10px;
+        margin-top: 15px;
+        box-shadow: 2px 2px black;
        }
        table,th,tr,td{
         border: 1px solid #ddd;
@@ -158,6 +176,7 @@
         width: 50px;
         height: 50px;
         margin: 10px;
+        border: 4px solid sienna;
         transition: 0.3s;
         border-radius: 15px;
       }
@@ -165,6 +184,59 @@
         transform: scale(1.2);
       }
      
+      .skillbar{
+        width:100%;
+        height:5px;
+        background:#ddd;
+        }
+
+        .html{
+        width:30%;
+        height:5px;
+        background:orange;
+        }
+        .css{
+        width:32%;
+        height:5px;
+        background:orange;
+        }
+        .javascript{
+        width: 15%;
+        height:5px;
+        background:orange;
+        }
+        .java{
+        width:40%;
+        height:5px;
+        background:orange;
+        }
+        .oracle{
+        width:45%;
+        height:5px;
+        background:orange;
+        }
+
+        .dark{
+            border-radius: 10px;
+            background:black;
+            color:white;
+            cursor: pointer;
+        }
+        .dark:hover{
+            background-color: gray;
+        }
+        @media (max-width:768px){
+         #sidebar1,#sidebar2,#sidebar3{
+         width:100%;
+         float: none;
+        }
+        #counter{
+            font-size:18px;
+            font-weight:bold;
+            text-align:center;
+            margin-top:10px;
+        }
+}
     </style>
 </head>
 <body>
@@ -182,25 +254,32 @@
             <div id="sns">
                 <h2>SNS</h2>
                 <a href="https://github.com/leetaehwa1" target="_blank">
-                    <img src="깃허브.jpg" class="snsicon" alt="깃허브">   
+                    <img src="../media/깃허브.jpg" class="snsicon" alt="깃허브">   
                 </a>
 
                 <a href="https://blog.naver.com/leetaehwahtml" target="_blank">
-                    <img src="네이버블로그.jpg" class="snsicon" alt="네이버 블로그">   
+                    <img src="../media/네이버.jpg" class="snsicon" alt="네이버 블로그">   
                 </a>
 
                  <a href="https://www.instagram.com/dlxoghk01?igsh=ZDdqZzM0ZjN6cXds&utm_source=qr" target="_blank">
-                    <img src="인스타.jpg" class="snsicon" alt="인스타그램">   
+                    <img src="../media/인스타.jpg" class="snsicon" alt="인스타그램">   
                 </a>
             
                  <a href="https://www.youtube.com/@%EC%9D%B4%ED%83%9C%ED%99%94-y4k" target="_blank">
-                    <img src="유튜브.jpg" class="snsicon" alt="유튜브">   
+                    <img src="../media/유튜브.jpg" class="snsicon" alt="유튜브">   
                 </a>
             </div>
         </div>
 
         <div id="sidebar2">
-            <div id="watch"></div>
+            <div id="watch">
+            </div>
+                    <p>
+                    Visitors
+                    👀
+                    <span id="busuanzi_value_site_uv"></span>
+                    </p>
+            <button class="dark" onclick="darkMode()">Dark Mode</button>
             <div id="section">
                 <h2 class="subtitle">자기소개</h2> 
                 <p><mark>프로그래밍</mark>에 관심이 많습니다. <br>현재 열심히 공부하며 코딩 중!</p>
@@ -256,6 +335,7 @@
                       </tr>
                   </tbody>
                 </table>
+                
                 </div>
                 
         </div>
@@ -263,11 +343,11 @@
         <div id="sidebar3"> 
                 <h2 class="subtitle2">Skills</h2>
                     <ul class="ul1">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>JavaScript</li>
-                    <li>Java</li>
-                    <li>Oracle</li>
+                    <li>HTML<div class="skillbar"><div class="html"></div></div></li>
+                    <li>CSS<div class="skillbar"><div class="css"></div></div></li>
+                    <li>JavaScript<div class="skillbar"><div class="javascript"></div></div></li>
+                    <li>Java<div class="skillbar"><div class="java"></div></div></li>
+                    <li>Oracle<div class="skillbar"><div class="oracle"></div></div></li>
                     </ul>
 
              <h2 class="subtitle2">자격증</h2>
@@ -304,4 +384,10 @@
             + minutes + " : " + second;
         obj.innerHTML = time;
     },1000);
+    
+    function darkMode(){
+     document.body.classList.toggle("dark");
+    }
+    
 </script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
