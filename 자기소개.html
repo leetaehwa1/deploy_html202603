@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자기소개 페이지</title>
+    <link href="자기소개style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <p>{{message}}</p>
+    </div>
+    <div id="container">
+        <div id="sidebar1">
+            <div id="namecard">
+                <div class="box1"></div>
+                <h1>Lee TaeHwa</h1>
+                <div class="small red" >caption : </div>
+                <p class="small">Growing Programer.</p>
+            </div>
+            <ul class="list1">
+                <li>🏠 Incheon, Korea</li>
+                <li>📧 th3926@naver.com</li>
+            </ul>
+            <div id="sns">
+                <h2>SNS</h2>
+                <a href="https://github.com/leetaehwa1" target="_blank">
+                    <img src="깃허브.jpg" class="snsicon" alt="깃허브">   
+                </a>
+
+                <a href="https://blog.naver.com/leetaehwahtml" target="_blank">
+                    <img src="네이버.jpg" class="snsicon" alt="네이버 블로그">   
+                </a>
+
+                 <a href="https://www.instagram.com/dlxoghk01?igsh=ZDdqZzM0ZjN6cXds&utm_source=qr" target="_blank">
+                    <img src="인스타.jpg" class="snsicon" alt="인스타그램">   
+                </a>
+            
+                 <a href="https://www.youtube.com/@%EC%9D%B4%ED%83%9C%ED%99%94-y4k" target="_blank">
+                    <img src="유튜브.jpg" class="snsicon" alt="유튜브">   
+                </a>
+            </div>
+            <div id="download-area" style="text-align: center; margin-top: 20px;">
+                <a href="이력서파일경로.pdf" download class="btn-download">
+                    📄 Resume Download
+                </a>
+            </div>
+        </div>
+
+        <div id="sidebar2">
+            <div id="watch">
+            </div>
+                    <p>
+                    Visitors
+                    👀
+                    <span id="busuanzi_value_site_uv"></span>
+                    </p>
+            <button class="dark"  onclick="darkMode()">Dark Mode</button>
+            <div id="section">
+                <h2 class="subtitle">Introduce</h2> 
+                <p><mark>프로그래밍</mark>에 관심이 많습니다. <br>현재 열심히 공부하며 코딩 중!</p>
+                
+            </div>
+
+            <div id="section">
+            <h2 class="subtitle">Experience</h2>
+                <ul>
+                    <li>프론트엔드
+                        <ul>
+                            <li>HTML/CSS/JAVASCRIPT </li>
+                            <li>웹 페이지 잘 못 만든다. </li>
+                            <li>다 못한다.</li>
+                            <li>디자인 너무 어려움</li>
+                            <li>프로그래밍 더 열심히 해보자</li>
+                        </ul>
+                    </li>
+                    <li>백엔드
+                        <ul>
+                            <li>자바 잘함 </li>
+                            <li>오라클 더 잘함</li>
+                            <li>사실 거짓말</li>
+                            <li>백엔드가 더 어려워</li>
+                        </ul>                        
+                    </li>
+                </ul>             
+            </div>
+            <div id="section">
+            <h2 class="subtitle">Education</h2>
+                <table>
+                  <caption><span class="box2">학력 사항</span></caption>
+                  <thead>
+                      <tr>
+                          <th>출신학교</th>
+                          <th>전공</th>
+                          <th>기간</th>
+                          <th>구분</th>
+                      </tr>
+                  </thead>
+                  <tbody>
+                      <tr>
+                          <td>좋은대학교</td>
+                          <td>좋은학과</td>
+                          <td>2010.3 ~ 2013.2</td>
+                          <td>졸업</td>
+                      </tr>
+                      <tr>
+                          <td>꽤좋은고등학교</td>
+                          <td> - </td>
+                          <td>2007.3 ~ 2009.2</td>
+                          <td>졸업</td>
+                      </tr>
+                  </tbody>
+                </table>
+                </div>
+                <div id="section" class="reveal">
+    <h2 class="subtitle">GitHub Activity</h2>
+    <div class="github-graph">
+        <img src="https://ghchart.rshah.org/00eaff/leetaehwa1" alt="github grass" style="width: 100%;">
+    </div>
+</div>
+        </div>
+
+        <div id="sidebar3"> 
+                <h2 class="subtitle2">Skills</h2>
+<div class="skills-badges">
+    <img src="https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white" alt="html">
+    <img src="https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white" alt="css">
+    <img src="https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black" alt="js">
+    <img src="https://img.shields.io/badge/Vue.js-4FC08D?style=for-the-badge&logo=vuedotjs&logoColor=white" alt="vue">
+    <img src="https://img.shields.io/badge/Oracle-F80000?style=for-the-badge&logo=oracle&logoColor=white" alt="oracle">
+</div>
+
+             <h2 class="subtitle2">자격증</h2>
+             <ul class="ul1">
+                    <li>검도 3단</li>
+                    <li>자동차운전면허 1종보통</li>
+                    <li>누워서 릴스보기기사</li>
+             </ul>
+             <h2 class="subtitle2">Projects</h2>
+                <ul class="ul1">
+                    <li> 자기소개 웹페이지</li>
+                    <li onclick="openProject('todo')" class="project-item">
+                        <span>✅ Todo List 웹앱</span>
+                        <span class="arrow">→</span>
+                    </li>
+                    <li onclick="openProject('shop')" class="project-item">
+                        <span>🛒 간단한 쇼핑몰</span>
+                        <span class="arrow">→</span>
+                    </li>
+                </ul>
+                <h2 class="subtitle2">Tools</h2>
+                <ul class="ul1">
+                <li>VS Code</li>
+                <li>Git</li>
+                <li>GitHub</li>
+                <li>Figma</li>
+                </ul>
+        </div>
+    </div>
+    
+
+    <div id="projectModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div id="modalBody"></div>
+      </div>
+  </div>
+</div>
+
+</body>
+</html>
+<script>
+    setInterval(()=>{
+        let datetime = new Date();
+        let obj = document.querySelector("#watch");
+        let minutes = datetime.getMinutes() < 10 ? "0" + datetime.getMinutes() : datetime.getMinutes()
+        let second = datetime.getSeconds() < 10 ? "0" + datetime.getSeconds() : datetime.getSeconds()
+        let time = datetime.getHours()+ " : " 
+            + minutes + " : " + second;
+        obj.innerHTML = time;
+    },1000);
+    
+    // 다크모드
+    window.addEventListener("DOMContentLoaded", () => {
+    if (localStorage.getItem("theme") === "dark") {
+        document.body.classList.add("dark");
+    }   
+        });
+    function darkMode(){
+     document.body.classList.toggle("dark");
+     if (document.body.classList.contains("dark")) {
+        localStorage.setItem("theme", "dark");
+        alert("다크모드가 활성화되었습니다.");
+    } else {
+        localStorage.setItem("theme", "light");
+        alert("라이트모드로 전환되었습니다.");
+    }
+    }
+
+    new Vue({
+        el: "#app",
+        data: {
+            message: "Vue 적용 완료!"
+        }
+    });
+
+        window.onload = function() {
+        // 전체 화면 fade-in
+        document.body.classList.add("fade-in");
+
+        // 카드 순차 등장
+        const items = ["sidebar1", "sidebar2", "sidebar3"];
+
+        items.forEach((id, index) => {
+            setTimeout(() => {
+            document.getElementById(id).classList.add("show");
+            }, 300 * index);
+        });
+        };
+
+    const projectData = {
+    todo: {
+        title: "📝 Todo List 웹앱",
+        stack: "HTML5, CSS3, JavaScript (Vanilla JS)",
+        desc: "단순한 메모 기록을 넘어 우선순위 필터링 기능을 포함한 웹앱입니다.",
+        problem: "<b>Challenge:</b> 새로고침 시 데이터가 사라지는 문제 발생.<br><b>Solution:</b> 브라우저의 <b>LocalStorage</b>를 활용하여 데이터를 로컬에 저장하고, 페이지 로드 시 다시 불러오는 로직을 구현하여 해결했습니다."
+        },
+    shop: {
+        title: "🛒 간단한 쇼핑몰 사이트",
+        stack: "Vue.js, CSS Grid, JSON API",
+        desc: "상품 목록 시각화 및 장바구니 기능을 구현한 미니 커머스입니다.",
+        problem: "<b>Challenge:</b> 많은 이미지 로딩으로 인한 초기 속도 저하.<br><b>Solution:</b> 이미지 지연 로딩(Lazy Loading) 기법을 적용하여 초기 렌더링 속도를 40% 개선했습니다."
+        }
+    };
+
+    function openProject(key) {
+        const data = projectData[key];
+        const modal = document.getElementById("projectModal");
+        const body = document.getElementById("modalBody");
+
+        body.innerHTML = `
+            <h2>${data.title}</h2>
+            <p class="tech-stack">🛠 사용 기술: ${data.stack}</p>
+            <hr>
+            <p>${data.desc}</p>
+            <div class="problem-solving">
+                <h4>🚀 Troubleshooting</h4>
+                <p>${data.problem}</p>
+            </div>
+        `;
+        modal.style.display = "block";
+    }
+
+    function closeModal() {
+        document.getElementById("projectModal").style.display = "none";
+    }
+
+    // 모달 바깥 클릭 시 닫기
+    window.onclick = function(event) {
+        const modal = document.getElementById("projectModal");
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+
+    const observerOptions = {
+  threshold: 0.1 // 요소가 10% 정도 보일 때 실행
+};
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('active');
+    }
+  });
+}, observerOptions);
+
+// 감시할 요소들 지정 (섹션, 테이블 등)
+document.querySelectorAll('#section, table, .subtitle2').forEach(el => {
+  el.classList.add('reveal');
+  observer.observe(el);
+});
+
+
+
+</script>
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>

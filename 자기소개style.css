@@ -1,0 +1,370 @@
+  body {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 15px;
+    background-color: #d2d7e2;
+  }
+ 
+ #container{
+        display: flex;
+        width: 1300px;
+        height: 100vh;
+        margin: 30px auto;
+        box-sizing: border-box;
+       }
+      
+       #sidebar1{
+        border-radius: 15px;
+        width: 300px;
+        height: auto;
+        min-height: 800px;
+        padding: 30px;
+        box-sizing: border-box;
+        box-shadow: 2px 2px 2px gray;
+        background-color: cornflowerblue;
+        color: white;
+        transition: 0.3s;
+       }
+
+       
+       #sidebar1:hover,
+       #sidebar2:hover,
+       #sidebar3:hover{
+        transform: translateY(-10px) scale(1.02);
+       }
+
+       #sidebar2{
+        border-radius: 15px;
+        width: 700px;
+        height: auto;
+        min-height: 800px;
+        padding: 0px 30px;
+        box-shadow: 2px 2px 2px gray;
+        box-sizing: border-box;
+        background-color: aliceblue;
+        color: black;
+        position: relative;
+        transition: 0.3s;
+       }
+       #sidebar3{
+        border-radius: 15px;
+        width: 300px;
+        height: auto;
+        min-height: 800px;
+        padding: 10px 15px;
+        background-color: brown;
+        box-sizing: border-box;
+        transition: 0.3s;
+       }
+       #namecard{
+        font-weight: bold;
+        padding: 15px;
+       }
+       #sns{
+        text-align: center;
+        font-size: x-large;
+        color: white;
+       }
+       #clickbox1{
+        border: 20px solid white;
+        border-radius: 50%;
+        background-color: white;
+       }
+       #watch{
+            position: absolute;
+
+            top: 20px;
+            right: 20px;
+
+            padding: 10px 20px;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            color: #00eaff;
+
+            background: rgba(0,0,0,0.6);
+            border: 2px solid #00eaff;
+            border-radius: 10px;
+
+            box-shadow: 0 0 10px #00eaff;
+
+            letter-spacing: 3px;
+
+       }
+       a{
+        text-decoration: none;
+        color: cornflowerblue;
+       }
+       
+       .bold{
+        font-weight: bold;
+       }
+       .box1{
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 2px solid white;
+            background-image: url(레서판다.jpg);
+            background-size: cover;
+       }
+       .box1:hover{
+        background-image: url(카피바라.jpg);
+       }
+       .box2{
+        width: 30px;
+        height: 20px;
+        background-color: violet;
+        border: 2px darkred cornflowerblue;
+        box-sizing: border-box;
+        box-shadow: 1px 1px black;
+        font-style: normal;
+        font-weight: bold;
+       }
+      
+
+       .normal{
+        font-weight: normal;
+       }
+       ul{
+        line-height: 1.8;
+       }
+       .ul1{
+        color: aliceblue;
+       }
+       .list1{
+        list-style: none;
+       }
+       a:active{
+        color: chartreuse;
+       }
+       a:hover{
+        color: skyblue;
+       }
+       .cursor{
+        cursor: pointer;
+       }
+       
+    
+       .subtitle{
+        border-left: 5px solid aliceblue;
+        padding-left: 10px;
+        border-left-color: cornflowerblue;
+        font-style: italic;
+       }
+       .subtitle2{
+        border-left: 5px solid burlywood;
+        padding-left: 10px;
+        color: honeydew;
+        font-style: italic;
+        } 
+       table{
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 15px;
+        box-shadow: 2px 2px black;
+       }
+       table,th,tr,td{
+        border: 1px solid #ddd;
+        text-align: center;
+        font-size: 14px;
+       }
+      thead{
+       background-color: rgb(86, 86, 233);
+       color: white;
+      }
+      .snsicon{
+        width: 50px;
+        height: 50px;
+        margin: 10px;
+        border: 4px solid sienna;
+        transition: 0.3s;
+        border-radius: 15px;
+      }
+      .snsicon:hover{
+        transform: scale(1.2);
+      }
+      .red{
+        color: rgb(97, 253, 0);
+      }
+      .skillbar{
+        width:100%;
+        height:5px;
+        background:#ddd;
+        }
+
+        .html{
+        width:30%;
+        height:5px;
+        background:orange;
+        }
+        .css{
+        width:32%;
+        height:5px;
+        background:orange;
+        }
+        .javascript{
+        width: 15%;
+        height:5px;
+        background:orange;
+        }
+        .java{
+        width:40%;
+        height:5px;
+        background:orange;
+        }
+        .oracle{
+        width:45%;
+        height:5px;
+        background:orange;
+        }
+
+        .dark{
+            border-radius: 10px;
+            background:black;
+            color:white;
+        }
+        @media (max-width:768px){
+          #container {
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+            margin: 0;
+          }
+         #sidebar1,#sidebar2,#sidebar3{
+            width:100% !important;
+            height: auto;
+            margin-bottom: 20px;
+            float: none;
+           
+         }
+
+         
+         #watch {
+            position: static; /* 시계를 상단에 고정 */
+            text-align: center;
+            margin-bottom: 10px;
+          }
+        }
+
+        .modal {
+          display: none; 
+          position: fixed;
+          z-index: 1000;
+          left: 0; top: 0;
+          width: 100%; height: 100%;
+          background-color: rgba(0,0,0,0.7);
+          backdrop-filter: blur(5px); /* 배경 흐림 처리 */
+        }
+
+      /* 모달 박스 */
+      .modal-content {
+        background-color: #1a1a1a;
+        color: white;
+        margin: 10% auto;
+        padding: 30px;
+        border: 1px solid #00eaff;
+        width: 60%;
+        border-radius: 20px;
+        box-shadow: 0 0 20px #00eaff;
+      }
+
+      .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+      }
+
+      .close:hover { color: #00eaff; }
+
+      .tech-stack { color: orange; font-weight: bold; margin-bottom: 15px; }
+      .problem-solving { background: #222; 
+                        padding: 15px; 
+                        border-radius: 10px; 
+                        border-left: 4px solid #00eaff; }
+
+      /* 프로젝트 아이템 기본 스타일 */
+      .project-item {
+          display: flex;
+          justify-content: space-between; /* 텍스트와 화살표를 양 끝으로 배치 */
+          align-items: center;
+          padding: 10px 15px;
+          margin-bottom: 8px;
+          border-radius: 8px;
+          background: rgba(255, 255, 255, 0.05); /* 살짝 밝은 배경 */
+          cursor: pointer;
+          transition: all 0.3s ease;
+          list-style: none; /* 점 제거 */
+      }
+      /* 화살표 스타일 */
+      .arrow {
+          opacity: 0; /* 처음엔 숨김 */
+          transform: translateX(-10px); /* 왼쪽으로 살짝 밀어둠 */
+          transition: all 0.3s ease;
+          color: #00eaff;
+          font-weight: bold;
+      }
+
+      /* 호버(마우스 올렸을 때) 효과 */
+      .project-item:hover {
+          background: rgba(0, 234, 255, 0.1); /* 포인트 컬러 배경 */
+          transform: translateX(5px); /* 항목 전체가 살짝 오른쪽으로 이동 */
+          box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .project-item:hover .arrow {
+          opacity: 1; /* 화살표 나타남 */
+          transform: translateX(0); /* 제자리로 이동 */
+      }
+
+      /* 클릭 효과 */
+      .project-item:active {
+          transform: scale(0.98);
+      }
+
+      /* 처음에는 투명하고 아래에 위치 */
+      .reveal {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      /* 활성화되었을 때 제자리로 */
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      .skills-badges {
+          display: flex;
+          flex-wrap: wrap; /* 좁은 화면에서 자동 줄바꿈 */
+          gap: 10px;
+          margin-bottom: 20px;
+      }
+      .skills-badges img {
+          height: 25px; /* 크기 적절히 조절 */
+          transition: transform 0.2s;
+      }
+      .skills-badges img:hover {
+          transform: translateY(-3px); /* 뱃지에도 살짝 호버 효과 */
+      }
+
+      .btn-download {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 2px solid #00eaff;
+    color: #00eaff;
+    font-weight: bold;
+    border-radius: 30px;
+    transition: all 0.3s;
+}
+.btn-download:hover {
+    background-color: #00eaff;
+    color: #000;
+    box-shadow: 0 0 15px rgba(0, 234, 255, 0.5);
+}
+        /* 팝업 넣기 */
+        /* 인터벌 함수 넣기 */
+    

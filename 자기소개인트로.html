@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>Intro</title>
+  <link rel = "stylesheet" href = "자기소개인트로.css">
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Noto+Sans+KR&display=swap" rel="stylesheet">
+
+<body>
+
+  <div id="container">
+    <div id="loading">
+      <div class="spinner"></div>
+      <p>Loading...</p>
+    </div>
+  <h1 class="title" id="title"></h1>
+  <p class="subtitle">자라나는 풀스택 개발자</p>
+  <p class="desc">개발자 이태화의 포트폴리오</p>
+  <button onclick="goMain()" keyup.enter="goMain()">ENTER</button>
+</div>
+
+
+</body>
+</head>
+</html>
+
+ <script>
+    const titleText = "LEE TAE HWA";
+    let i = 0;
+    function typeTitle() {
+      const titleEl = document.getElementById("title");
+
+      
+
+      if (i < titleText.length) {
+        document.getElementById("title").innerHTML += titleText.charAt(i);
+        i++;
+        setTimeout(typeTitle, 100);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", function() {
+      const titleEl = document.getElementById("title");
+      titleEl.textContent = ""; 
+      i = 0;
+      typeTitle();
+    });
+
+
+    let isMoving = false;
+
+    document.addEventListener("keyup", function(e) {
+      if (e.key === "Enter") {
+        goMain();
+    }
+  });
+
+    function goMain() {
+      if(isMoving)return;
+
+      if(confirm("메인 페이지로 이동할까요?")){
+      isMoving = true;
+
+      const container = document.getElementById("container");
+      const loading = document.getElementById("loading");
+
+      container.classList.add("fade-out");
+
+      setTimeout(() => {
+        loading.classList.add("active");
+      }, 500);
+
+      setTimeout(() => {
+        location.href = "자기소개.html";
+      }, 1200);
+    }
+
+    
+}
+  </script>

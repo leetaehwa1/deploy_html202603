@@ -1,0 +1,154 @@
+body {
+  margin: 0;
+  background: black;
+  color: white;
+  font-family: sans-serif;
+  background: linear-gradient(to right, #000, #222);
+}
+
+#container {
+  height: 100vh;
+    animation: fadeIn 1.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;   /* 세로 가운데 */
+  align-items: center;       /* 가로 가운데 */
+
+  text-align: center;
+}
+#loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+
+  background: rgba(0,0,0,0.9);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.5s;
+}
+
+#loading.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid #fff;
+  border-top: 4px solid transparent;
+  border-radius: 50%;
+
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.title {
+    font-family: 'orbitron', sans-serif;
+  animation: fadeIn 1s ease;
+  font-size: 70px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  letter-spacing: 6px;
+}
+.title::after {
+  content: "|";
+  margin-left: 5px;
+  color: #00eaff;
+  font-weight: normal;
+  animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+ from, to { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+.subtitle {
+    animation: fadeIn 1s ease;
+  animation-delay: 1.3s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  font-size: 20px;
+  color: #aaa;
+}
+
+.desc {
+    animation: fadeIn 1s ease;
+  animation-delay: 1.6s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+
+button {
+   animation: fadeIn 1s ease forwards, float 2s ease-in-out infinite;
+  animation-delay: 1.5s, 2.5s; /* fadeIn 끝나고 float 시작 */
+  animation-delay: 1.5s;
+  opacity: 0;
+
+  padding: 12px 40px;
+  font-size: 16px;
+  border: 1px solid white;
+  background: transparent;
+  color: white;
+  cursor: pointer;
+
+  transition: all 0.3s ease;
+}
+button.pressed {
+  transform: scale(0.95);
+  background: white;
+  color: black;
+}
+
+@keyframes float {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+button:hover {
+  background: white;
+  color: black;
+  transform: scale(1.1);
+}
+button:active {
+  transform: scale(0.95);  /* 눌리는 느낌 */
+}
+.fade-out {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 1.2s ease;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 40px;
+    letter-spacing: 3px;
+  }
+  .subtitle {
+    font-size: 16px;
+  }
+}
