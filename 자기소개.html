@@ -6,17 +6,21 @@
     <title>자기소개 페이지</title>
     <link href="자기소개style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Pretendard&family=Orbitron:wght@600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;700&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
 </head>
 <body>
     <div id="app">
-        <h1>{{greeting}}</h1>
-        <p>경력 : {{career}} </p>
+        <div v-if="isVisible" class="vue-popup">
+        <div class="popup-content">
+            <h1>{{greeting}}</h1>
+            <p>⭐경력 : {{career}} </p>
+            <button @click="closePopup">닫기</button>
+         </div>
+         </div>
     </div>
     <div id="container">
+        
         <div id="sidebar1">
             <div id="namecard">
                 <div class="box1"></div>
@@ -165,6 +169,7 @@
         </div>
     </div>
     
+    
 
     <div id="projectModal" class="modal">
   <div class="modal-content">
@@ -203,17 +208,25 @@
         alert("라이트모드로 전환되었습니다.");
     }
     }
+    const {createApp} = Vue;
 
-   const {createApp} = Vue;
-    createApp({
-        data(){
-            return{
-                greeting : "방문해주셔서 감사합니다.",
-                career : "웹 개발 프로젝트 2회 수행"
+     const app = createApp({
+            data(){
+                return{
+                    greeting : "방문해주셔서 감사합니다.",
+                    career : "웹 개발 프로젝트 2회 수행",
+                    isVisible : true
+                }
+            },
+            methods: {
+                closePopup(){
+                    console.log("버튼 클릭");
+                    this.isVisible = false;
+                }
             }
-        }
-    }).mount('#app')
-
+        });
+        app.mount('#app')
+        
         window.onload = function() {
         // 전체 화면 fade-in
         document.body.classList.add("fade-in");
