@@ -69,7 +69,7 @@ body {
   font-weight: normal;
   animation: blink 0.8s infinite;
 }
-
+ 
 @keyframes blink {
  from, to { opacity: 1; }
   50% { opacity: 0; }
